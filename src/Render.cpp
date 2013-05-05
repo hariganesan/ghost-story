@@ -28,7 +28,7 @@ void MyGlWindow::draw () {
 	//glBegin(GL_LINE_STRIP); glVertex2f(w(), h()); glVertex2f(-w(),-h()); glEnd();
 	//glBegin(GL_LINE_STRIP); glVertex2f(w(),-h()); glVertex2f(-w(), h()); glEnd();
 	
-	stringstream ss;
+	std::stringstream ss;
 	Location location = Location();
 
 	////////////////
