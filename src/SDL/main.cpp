@@ -1,18 +1,14 @@
 // Hari Ganesan 2/4/13
-// zombie-roll: an rpg
+// main.cpp for ghost-story SDL version
 
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <FL/Fl.H>
-#include <FL/Fl_Window.H>
-#include <FL/Fl_Menu_Bar.H>
-#include <FL/Fl_Value_Slider.H>
-#include <FL/Fl_Check_Button.H>
-#include <FL/Fl_Button.H>
-
-#include <FL/Fl_File_Chooser.H>		// FLTK file chooser
-
+#include "SDL/SDL.h"
+#include "SDL/SDL_mixer.h"
+#include "SDL/SDL_image.h"
+#include "SDL/SDL_opengl.h"
+#include "SDL_ttf/SDL_ttf.h"
 #include "Actor.hpp"
 
 using namespace std;
