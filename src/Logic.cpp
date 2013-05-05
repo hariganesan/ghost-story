@@ -4,7 +4,7 @@
 #include "Render.hpp"
 
 void MyGlWindow::logic() {
-	if (s->mc->isJumping()) {
+	if (s->mc->isJumping) {
 		s->mc->jump();
 	}
 }
