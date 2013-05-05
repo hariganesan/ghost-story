@@ -16,6 +16,7 @@
 #include <FL/gl.h>
 #include <GL/glu.h>
 
+#include "Elements.hpp"
 
 // OPENGL WINDOW CLASS
 class MyGlWindow;
