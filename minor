@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git a .
+git c -m "m"
+git p
+git p zoo
+echo "pushed minor edit"
