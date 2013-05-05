@@ -10,8 +10,10 @@
 #include <FL/Fl_Value_Slider.H>
 #include <FL/Fl_Check_Button.H>
 #include <FL/Fl_Button.H>
-
 #include <FL/Fl_File_Chooser.H>		// FLTK file chooser
+// open gl
+#include <FL/Gl.h>
+#include <Gl/Glu.h>
 
 #include "Actor.hpp"
 
@@ -27,7 +29,7 @@ int main(int argc, char **argv) {
 	//runGame();
 
 	
-	return fltk::run();
+	return Fl::run();
 }
 
 void makeWindow() {
@@ -35,7 +37,6 @@ void makeWindow() {
 	win->begin();
 	win->end();
 	win->show();
-	
 }
 
 void runGame() {
@@ -55,7 +56,7 @@ void runGame() {
 
 	while (isRunning) {
 		// EVENTS
-		while (SDL_PollEvent(&event)) {
+		/*while (SDL_PollEvent(&event)) {
 			if (event.type == SDL_QUIT || 
 				 (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_q)) {
 				isRunning = false;
@@ -70,7 +71,7 @@ void runGame() {
 			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_UP) {
 				keys.up = true;
 			}
-		}
+		}*/
 
 		// LOGIC
 		// collision detection
@@ -197,11 +198,8 @@ void render(Stage *s) {
 	glPushMatrix();
 	// TODO: change to 0,1 for depth
 	glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, -1, 1); // set matrix
-	SDL_Color TEXT_WHITE = {200, 200, 200};
-	//SDL_Color TEXT_BLACK = {20, 20, 20};
-	//SDL_Color TEXT_RED = {150, 0, 0};
-	SDL_Rect location;
 	stringstream ss;
+	location = Location();
 
 	////////////////
 	// BEGIN DRAWING
@@ -221,14 +219,14 @@ void render(Stage *s) {
 	location.x = WINDOW_WIDTH-110;
 	location.y = SBAR_TEXT_HEIGHT;
 	ss << "HP: " << s->mc->hitPoints << "/" << s->mc->maxHitPoints;
-	SDL_GL_RenderText(ss.str().c_str(), TEXT_WHITE, &location);
+	//SDL_GL_RenderText(ss.str().c_str(), TEXT_WHITE, &location);
 	ss.str("");
 
 	// pills
 	location.x = 20;
 	location.y = SBAR_TEXT_HEIGHT;
 	ss << s->mc->pillCount;
-	SDL_GL_RenderText(("Pills: " + ss.str()).c_str(), TEXT_WHITE, &location);		
+	//SDL_GL_RenderText(("Pills: " + ss.str()).c_str(), TEXT_WHITE, &location);		
 
 
 	// draw MC
@@ -284,7 +282,7 @@ void render(Stage *s) {
 	////////////////
 
 	glPopMatrix();
-	SDL_GL_SwapBuffers();
-	SDL_Delay(1000/SDL_FRAME_RATE); // frame rate 30ms
+	//SDL_GL_SwapBuffers();
+	//SDL_Delay(1000/SDL_FRAME_RATE); // frame rate 30ms
 	return;	
 }

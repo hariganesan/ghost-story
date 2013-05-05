@@ -35,3 +35,7 @@ struct Keys {
 	bool g;
 };
 
+struct Location {
+	double x;
+	double y;
+};
