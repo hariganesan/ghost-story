@@ -6,8 +6,8 @@
 #include <math.h>
 
 // window dimensions
-const int WINDOW_WIDTH = 500;
-const int WINDOW_HEIGHT = 300;
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGHT = 600;
 const int MARGIN = 10;
 const int SBAR_HEIGHT = 50;
 const int SBAR_TEXT_HEIGHT = 20;
