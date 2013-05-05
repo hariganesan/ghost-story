@@ -1,6 +1,6 @@
 // Hari Ganesan 5/5/13
 // ghost-story GL commands library file
-// includes declarations for both render and events
+// includes declarations for render, events, and logic
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
@@ -26,6 +26,7 @@ class MyGlWindow : public Fl_Gl_Window {
 	void draw ();
 	void resize(int X,int Y,int W,int H);
 	int handle(int event);
+	void logic();
 
 public:
 	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0);

@@ -16,6 +16,8 @@ void MyGlWindow::FixViewport(int W,int H) {
 // DRAWING
 
 void MyGlWindow::draw () {
+	logic();
+
 	if (!valid()) { valid(1); FixViewport(w(), h()); }      // first time? init
 
   // Clear screen to bg color

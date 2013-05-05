@@ -1,5 +1,6 @@
-// Hari Ganesan
-// Elements file
+// Hari Ganesan 5/5/13
+// ghost-story Elements file
+
 #include <iostream>
 #include <sstream>
 #include <string>

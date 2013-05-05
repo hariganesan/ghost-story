@@ -1,5 +1,5 @@
-// Hari Ganesan
-// Actor functions
+// Hari Ganesan 5/5/13
+// ghost-story Actor functions
 
 #include "Actor.hpp"
 
