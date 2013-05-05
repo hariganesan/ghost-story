@@ -47,7 +47,6 @@ int MyGlWindow::handle(int event) {
 							s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
 							s->mcP->possessed = false;
 							s->mcP = NULL;
-							redraw(); return 1;
 						} else {
 							s->mcG = s->mc->createGhost(s->mc->getX(), s->mc->getY());
 						}
@@ -63,7 +62,7 @@ int MyGlWindow::handle(int event) {
 					} else {
 						s->popUp("no pills remaining!");
 					}
-
+					redraw(); return 1;
 
 			}
 	}
