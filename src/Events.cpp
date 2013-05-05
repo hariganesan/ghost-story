@@ -15,7 +15,7 @@ int MyGlWindow::handle(int event) {
 				case 'w':
 					if (s->mc->isGhost) {
 						s->mcG->moveUp();
-					} else if (s->mc->!isJumping) {
+					} else if (!s->mc->isJumping) {
 						s->mc->isJumping = true;
 						s->mc->jump();
 					}
