@@ -45,7 +45,7 @@ void runGame() {
 	// game state
 	bool isRunning = true;
 	bool collision = false;
-	//bool moved = false;
+	bool moved = false;
 	Keys keys = Keys();
 
 	// set up game
