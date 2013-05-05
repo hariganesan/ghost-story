@@ -25,6 +25,7 @@ class MyGlWindow : public Fl_Gl_Window {
 	void FixViewport(int W,int H);
 	void draw ();
 	void resize(int X,int Y,int W,int H);
+	int handle(int event);
 
 public:
 	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0);
