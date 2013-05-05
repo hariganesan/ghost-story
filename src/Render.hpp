@@ -19,7 +19,7 @@
 #include "Actor.hpp"
 
 // OPENGL WINDOW CLASS
-class MyGlWindow {
+class MyGlWindow : public Fl_Gl_Window {
 	Stage *s;
 	double fg;                       // foreground brightness
 	double bg;                       // background brightness
