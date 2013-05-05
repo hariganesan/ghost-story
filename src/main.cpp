@@ -4,31 +4,29 @@
 #include "Render.hpp"
 
 
-void makeWindow();
+//void makeWindow();
 //void runGame(Stage *s);
 //void render(Stage *s);
 
 int main(int argc, char **argv) {
-	makeWindow();
+	//makeWindow();
 
 	//runGame();
 
-	return (Fl::run());
-}
 
-void makeWindow() {
 	// set up game
-	Stage *s = new Stage(GRAVITY_DEF);
+	//Stage *s = new Stage(GRAVITY_DEF);
 	//s->mc = new Character(s, "MC", 50, POS_X_START, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
 	//s->mcP = NULL;
 	//s->enemies[0] = new Character(s, "Enemy1", 20, 400, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
 	//s->enemies[0]->isPossessible = true;
 
 	Fl_Window win(WINDOW_WIDTH, WINDOW_HEIGHT, "Ghost Story");
-	MyGlWindow mygl(s, 10, 10, win.w()-20, win.h()-20);
+	MyGlWindow mygl(10, 10, win.w()-20, win.h()-20);
 	win.end();
 	win.resizable(mygl);
 	win.show();
+	return (Fl::run());
 }
 
 /*void runGame(Stage *s) {

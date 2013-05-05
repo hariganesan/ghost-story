@@ -1,5 +1,8 @@
 // Hari Ganesan
 // Elements file
+#include <iostream>
+#include <string>
+#include <math.h>
 
 // window dimensions
 const int WINDOW_WIDTH = 500;

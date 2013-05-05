@@ -1,12 +1,7 @@
 // Hari Ganesan
 // Actor class
 
-#include <iostream>
-#include <string>
-#include <math.h>
 #include "Elements.hpp"
-
-using namespace std;
 
 class Stage;
 
@@ -18,9 +13,9 @@ protected:
 	int h;
 
 public:
-	string id;
+	std::string id;
 
-	Actor(string d) : x(-1), y(-1) {id = d;};
+	Actor(std::string d) : x(-1), y(-1) {id = d;};
 };
 
 class DynamicActor : public Actor {
@@ -28,7 +23,7 @@ public:
 	bool isJumping;
 	int jumpCount;
 
-	DynamicActor(string d) : Actor(d), isJumping(false), jumpCount(0) {};
+	DynamicActor(std::string d) : Actor(d), isJumping(false), jumpCount(0) {};
 	bool moveLeft();
 	bool moveRight();
 	bool moveLeft(int x);
@@ -46,7 +41,7 @@ class Ghost : public DynamicActor {
 public:
 	bool moveUp();
 	bool moveDown();
-	Ghost(string d, int newX, int newY, int newW, int newH) : DynamicActor(d) {
+	Ghost(std::string d, int newX, int newY, int newW, int newH) : DynamicActor(d) {
 		x = newX;
 		y = newY;
 		w = newW;
@@ -69,7 +64,7 @@ public:
 	int attack;
 
 
-	Character(Stage *newS, string d, int hP, int newX, int newY, int nW, int nH) 
+	Character(Stage *newS, std::string d, int hP, int newX, int newY, int nW, int nH) 
 			: DynamicActor(d), isGhost(false), possessed(false), invincible(0)
 			,	pillCount(5), attack(1) {
 		hitPoints = hP;
@@ -97,6 +92,6 @@ public:
 
 
 	Stage(int g) {gravity = g;};
-	void popUp(string msg);
+	void popUp(std::string msg);
 	bool fullOverlap(DynamicActor *c1, DynamicActor *c2);
 };
