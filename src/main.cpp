@@ -28,7 +28,7 @@ void makeWindow() {
 	Fl_Window win(600, 400, "Ghost Story");
 	MyGlWindow mygl(s, 10, 10, win.w()-20, win.h()-20);
 	win.end();
-	win.resizable(mygl);
+	//win.resizable(mygl);
 	win.show();
 }
 
