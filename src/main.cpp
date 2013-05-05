@@ -17,12 +17,13 @@
 #include <GL/glu.h>
 
 #include "Actor.hpp"
+#include "Render.cpp"
 
 using namespace std;
 
 void makeWindow();
 void runGame();
-void render(Stage *s);
+//void render(Stage *s);
 
 int main(int argc, char **argv) {
 	makeWindow();
@@ -34,9 +35,10 @@ int main(int argc, char **argv) {
 }
 
 void makeWindow() {
-	Fl_Window *win = new Fl_Window(600, 400, "Ghost Story");
-	win->begin();
+	Fl_Window win(600, 400, "Ghost Story");
+	MyGlWindow mygl(10, 10, win.w()-20, win.h()-20);
 	win->end();
+	win->resizable(mygl);
 	win->show();
 }
 
@@ -190,100 +192,6 @@ void runGame() {
 
 		// RENDERING
 
-		render(s);
+		//render(s);
 	}
-}
-
-void render(Stage *s) {
-	glClear(GL_COLOR_BUFFER_BIT);
-	glPushMatrix();
-	// TODO: change to 0,1 for depth
-	glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, -1, 1); // set matrix
-	stringstream ss;
-	Location location = Location();
-
-	////////////////
-	// BEGIN DRAWING
-	////////////////
-
-
-	// draw status bar
-	glColor3ub(0,0,0);
-	glBegin(GL_QUADS);
-	glVertex2f(0, 0);
-	glVertex2f(WINDOW_WIDTH, 0);
-	glVertex2f(WINDOW_WIDTH, SBAR_HEIGHT);
-	glVertex2f(0, SBAR_HEIGHT);
-	glEnd();
-
-	// HP
-	location.x = WINDOW_WIDTH-110;
-	location.y = SBAR_TEXT_HEIGHT;
-	ss << "HP: " << s->mc->hitPoints << "/" << s->mc->maxHitPoints;
-	//SDL_GL_RenderText(ss.str().c_str(), TEXT_WHITE, &location);
-	ss.str("");
-
-	// pills
-	location.x = 20;
-	location.y = SBAR_TEXT_HEIGHT;
-	ss << s->mc->pillCount;
-	//SDL_GL_RenderText(("Pills: " + ss.str()).c_str(), TEXT_WHITE, &location);		
-
-
-	// draw MC
-	if (s->mc->invincible % 2 == 1) {
-		glColor3ub(0, 0, 200);
-	} else {
-		glColor3ub(255, 255, 255);
-	}
-
-	glBegin(GL_QUADS);
-	glVertex2f(s->mc->getX(), s->mc->getY());
-	glVertex2f(s->mc->getX()+s->mc->getW(), s->mc->getY());
-	glVertex2f(s->mc->getX()+s->mc->getW(), s->mc->getY()+s->mc->getH());
-	glVertex2f(s->mc->getX(), s->mc->getY()+s->mc->getH());
-	glEnd();
-
-	// draw other chars
-	glColor3ub(200, 0, 0);
-	for (int i = 0; i < MAX_ENEMY_COUNT; i++) {
-		Character *enemy = s->enemies[i];
-		if (enemy) {
-			glBegin(GL_QUADS);
-			glVertex2f(enemy->getX(), enemy->getY());
-			glVertex2f(enemy->getX()+enemy->getW(), enemy->getY());
-			glVertex2f(enemy->getX()+enemy->getW(), enemy->getY()+enemy->getH());
-			glVertex2f(enemy->getX(), enemy->getY()+enemy->getH());
-			glEnd();
-		}
-	}
-	
-	// draw ghost
-	if (s->mc->isGhost) {
-		glColor3ub(125, 125, 125);
-		glBegin(GL_QUADS);
-		glVertex2f(s->mcG->getX(), s->mcG->getY());
-		glVertex2f(s->mcG->getX()+s->mcG->getW(), s->mcG->getY());
-		glVertex2f(s->mcG->getX()+s->mcG->getW(), s->mcG->getY()+s->mcG->getH());
-		glVertex2f(s->mcG->getX(), s->mcG->getY()+s->mcG->getH());
-		glEnd();
-	}
-
-	// draw ground
-	glColor3ub(150, 50, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(0, GROUND_HEIGHT);
-	glVertex2f(WINDOW_WIDTH, GROUND_HEIGHT);
-	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
-	glVertex2f(0, WINDOW_HEIGHT);
-	glEnd();
-
-	////////////////
-	// END DRAWING
-	////////////////
-
-	glPopMatrix();
-	//SDL_GL_SwapBuffers();
-	//SDL_Delay(1000/SDL_FRAME_RATE); // frame rate 30ms
-	return;	
 }
