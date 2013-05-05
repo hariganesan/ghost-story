@@ -7,7 +7,7 @@
 
 	// FIX OPENGL VIEWPORT
 	//     Do this on init or when window's size is changed
-void MyGLWindow::FixViewport(int W,int H) {
+void MyGlWindow::FixViewport(int W,int H) {
 	glLoadIdentity();
 	glViewport(0,0,W,H);
 	glOrtho(-W,W,-H,H,-1,1);
@@ -15,7 +15,7 @@ void MyGLWindow::FixViewport(int W,int H) {
 
 // DRAWING
 
-void MyGLWindow::draw () {
+void MyGlWindow::draw () {
 	if (!valid()) { valid(1); FixViewport(w(), h()); }      // first time? init
 
   // Clear screen to bg color
@@ -108,7 +108,7 @@ void MyGLWindow::draw () {
 }
 
 // HANDLE WINDOW RESIZING
-void MyGLWindow::resize(int X,int Y,int W,int H) {
+void MyGlWindow::resize(int X,int Y,int W,int H) {
 	Fl_Gl_Window::resize(X,Y,W,H);
 	FixViewport(W,H);
 	redraw();
@@ -123,7 +123,7 @@ MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0) : Fl_Gl
 	end();
 }
 
-void MyGLWindow::SetBrightness(double new_fg, double new_bg) {
+void MyGlWindow::SetBrightness(double new_fg, double new_bg) {
 	fg = new_fg; bg = new_bg; redraw(); 
 }
 

@@ -27,6 +27,7 @@ class MyGlWindow : public Fl_Gl_Window {
 	void FixViewport(int W,int H);
 	void draw ();
 	void resize(int X,int Y,int W,int H);
+	
 public:
 	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0);
 	void SetBrightness(double new_fg, double new_bg);
