@@ -13,8 +13,8 @@
 #include <FL/Fl_File_Chooser.H>		// FLTK file chooser
 // open gl
 #include <FL/Fl_Gl_Window.H>
-#include <FL/Gl.h>
-#include <Gl/Glu.h>
+#include <FL/gl.h>
+#include <Gl/glu.h>
 
 #include "Actor.hpp"
 
