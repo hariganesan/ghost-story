@@ -15,7 +15,7 @@ all: $(SRC)/*.o main clean
 
 # build main
 main: main.o Actor.o
-	$(CC) -o $@ $(INCLUDE) $(LIBDIR) $^
+	$(CC) $^ $(INCLUDE) $(LIBDIR) -o $@
 
 # build object files
 $(SRC)/*.o: $(SRC)/*.cpp
