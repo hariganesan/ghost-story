@@ -6,6 +6,12 @@ Import fltk and open gl
 
 Work on player
 
+preliminary implementation
+screen shots
+sketches
+
+
+
 
 DONE
 =======

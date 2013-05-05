@@ -11,7 +11,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 1482,
+				"buffer_size": 426,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,9 +19,53 @@
 			"file": "docs/TODO.md",
 			"settings":
 			{
-				"buffer_size": 112,
+				"buffer_size": 180,
 				"line_ending": "Unix",
 				"name": "TODO"
+			}
+		},
+		{
+			"file": "docs/script.md",
+			"settings":
+			{
+				"buffer_size": 1195,
+				"line_ending": "Unix",
+				"name": "Script"
+			}
+		},
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 9480,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Actor.hpp",
+			"settings":
+			{
+				"buffer_size": 1905,
+				"line_ending": "Unix",
+				"name": "// Hari Ganesan"
+			}
+		},
+		{
+			"file": "src/Elements.hpp",
+			"settings":
+			{
+				"buffer_size": 749,
+				"line_ending": "Unix",
+				"name": "// Hari Ganesan"
+			}
+		},
+		{
+			"file": "src/Actor.cpp",
+			"settings":
+			{
+				"buffer_size": 1789,
+				"line_ending": "Unix",
+				"name": "// Hari Ganesan"
 			}
 		}
 	],
@@ -117,6 +161,38 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Character",
+			"W",
+			"X",
+			"CHAR_H_DEF",
+			"CHAR_W_DEF",
+			"CHAR_H_DEF",
+			"CHAR_W_DEF",
+			"h",
+			"w",
+			"CHAR_H_DEF",
+			"CHAR_W_DEF",
+			"s->enemies[i]",
+			"mcG",
+			"mc",
+			".c_str()",
+			"20",
+			"DynamicActor",
+			"WINDOW_HEIGHT",
+			"GROUND_HEIGHT",
+			"ING",
+			"void",
+			"->y",
+			"->x",
+			"x",
+			"g->",
+			"g",
+			"F_BOX_DIM",
+			"g->",
+			"g",
+			"FieldCharacter",
+			"zombie",
+			"Item",
 			"char *file",
 			"					cout << \"not returning c\" << endl;",
 			"cout << \"returning c\" << endl;",
@@ -212,39 +288,7 @@
 			");",
 			"ve(",
 			"(*",
-			"swap",
-			"move",
-			".direction",
-			"()",
-			"swap(jewelSelected, (*jewelSelected).",
-			"((*jewelSelected)",
-			"(*",
-			"jewelSelected",
-			"->",
-			"SDKL",
-			"selected",
-			"-BORDER",
-			"+BORDER",
-			"BLOCK",
-			"500",
-			"BLOCK",
-			"->",
-			" =",
-			"Shape",
-			"tetris",
-			"200",
-			"150",
-			"                      ",
-			"position",
-			"surface",
-			"j",
-			"                      ",
-			"250",
-			"i",
-			"x",
-			"g.",
-			"b",
-			"Block"
+			"swap"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -262,7 +306,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -270,15 +314,15 @@
 					"file": "Makefile",
 					"settings":
 					{
-						"buffer_size": 1482,
+						"buffer_size": 426,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1385,
-								1385
+								301,
+								301
 							]
 						],
 						"settings":
@@ -286,7 +330,7 @@
 							"syntax": "Packages/Makefile/Makefile.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 140.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -296,15 +340,15 @@
 					"file": "docs/TODO.md",
 					"settings":
 					{
-						"buffer_size": 112,
+						"buffer_size": 180,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								137,
+								137
 							]
 						],
 						"settings":
@@ -314,6 +358,144 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "docs/script.md",
+					"settings":
+					{
+						"buffer_size": 1195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								875,
+								932
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Script",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/main.cpp",
+					"settings":
+					{
+						"buffer_size": 9480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2607,
+								2607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1343.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Actor.hpp",
+					"settings":
+					{
+						"buffer_size": 1905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1514,
+								1514
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Hari Ganesan",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 939.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Elements.hpp",
+					"settings":
+					{
+						"buffer_size": 749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Hari Ganesan",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Actor.cpp",
+					"settings":
+					{
+						"buffer_size": 1789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Hari Ganesan",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 837.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
