@@ -33,7 +33,7 @@ void makeWindow() {
 	win.show();
 }
 
-void runGame(s) {
+void runGame(Stage *s) {
 	
 	// game state
 	bool isRunning = true;
@@ -180,4 +180,6 @@ void runGame(s) {
 
 		//render(s);
 	}
+
+	return;
 }
