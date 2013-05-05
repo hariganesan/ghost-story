@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 	// set up game
 	Stage *s = new Stage(GRAVITY_DEF);
 	s->mc = new Character(s, "MC", 50, POS_X_START, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
-	s->mcP = NULL;
+	s->mcP = mc;
 	s->enemies[0] = new Character(s, "Enemy1", 20, 400, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
 	s->enemies[0]->isPossessible = true;
 

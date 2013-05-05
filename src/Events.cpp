@@ -10,12 +10,11 @@ int MyGlWindow::handle(int event) {
 			return 1;
 
 		case FL_KEYBOARD:
-			if (Fl::event_key() == 'g') {
-				//s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
-				//s->mcP->possessed = false;
-				//s->mcP = NULL;
-				//redraw();
-				std::cout << "pressed g" << std::endl;
+			if (Fl::event_key() == 'g' && !s->mc->isGhost) {
+				s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
+				s->mcP->possessed = false;
+				s->mcP = NULL;
+				redraw();
 				return 1;
 			} else {
 				return 0;
