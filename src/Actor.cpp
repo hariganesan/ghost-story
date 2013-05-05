@@ -28,7 +28,7 @@ bool DynamicActor::moveRight(int delta) {
 }
 
 bool Ghost::moveUp() {
-	if (y+MOTION_DIM > SBAR_HEIGHT)
+	if (y+MOTION_DIM+h > SBAR_HEIGHT)
 		return false;
 
 	y += MOTION_DIM;
@@ -37,7 +37,7 @@ bool Ghost::moveUp() {
 }
 
 bool Ghost::moveDown() {
-	if (y-MOTION_DIM-h < GROUND_HEIGHT)
+	if (y-MOTION_DIM < GROUND_HEIGHT)
 		return false;
 
 	y -= MOTION_DIM;
