@@ -1,5 +1,6 @@
 // Hari Ganesan 5/5/13
 // ghost-story GL commands library file
+// includes declarations for both render and events
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
