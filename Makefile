@@ -17,7 +17,7 @@ SRC=src
 all: $(SRC)/*.o main clean
 
 # build main
-main: main.o Actor.o Render.o
+main: Actor.o Render.o main.o
 	$(CC) $^ $(INCLUDE) $(LIBS) -o $@
 
 # build object files
