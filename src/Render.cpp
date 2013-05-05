@@ -39,7 +39,7 @@ void MyGlWindow::draw () {
 	glVertex2f(WINDOW_WIDTH, SBAR_HEIGHT);
 	glVertex2f(0, SBAR_HEIGHT);
 	glEnd();
-
+/*
 	// HP
 	location.x = WINDOW_WIDTH-110;
 	location.y = SBAR_TEXT_HEIGHT;
@@ -90,7 +90,7 @@ void MyGlWindow::draw () {
 		glVertex2f(s->mcG->getX(), s->mcG->getY()+s->mcG->getH());
 		glEnd();
 	}
-
+*/
 	// draw ground
 	glColor3ub(150, 50, 0);
 	glBegin(GL_QUADS);
