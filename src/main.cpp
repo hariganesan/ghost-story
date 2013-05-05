@@ -19,11 +19,18 @@ int main(int argc, char **argv) {
 }
 
 void makeWindow() {
+	// set up game
+	Stage *s = new Stage(GRAVITY_DEF);
+	s->mc = new Character(s, "MC", 50, POS_X_START, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
+	s->mcP = NULL;
+	s->enemies[0] = new Character(s, "Enemy1", 20, 400, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
+	s->enemies[0]->isPossessible = true;
+
 	Fl_Window win(600, 400, "Ghost Story");
 	MyGlWindow mygl(10, 10, win.w()-20, win.h()-20);
-	win->end();
-	win->resizable(mygl);
-	win->show();
+	win.end();
+	win.resizable(mygl);
+	win.show();
 }
 
 void runGame() {
@@ -34,12 +41,7 @@ void runGame() {
 	bool moved = false;
 	Keys keys = Keys();
 
-	// set up game
-	Stage *s = new Stage(GRAVITY_DEF);
-	s->mc = new Character(s, "MC", 50, POS_X_START, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
-	s->mcP = NULL;
-	s->enemies[0] = new Character(s, "Enemy1", 20, 400, POS_Y_START, CHAR_W_DEF, CHAR_H_DEF);
-	s->enemies[0]->isPossessible = true;
+
 
 	while (isRunning) {
 		// EVENTS

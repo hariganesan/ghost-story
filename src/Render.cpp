@@ -5,6 +5,7 @@
 
 // OPENGL WINDOW CLASS
 class MyGlWindow : public Fl_Gl_Window {
+	Stage *s;
 	double fg;                       // foreground brightness
 	double bg;                       // background brightness
 	// FIX OPENGL VIEWPORT
@@ -46,14 +47,12 @@ class MyGlWindow : public Fl_Gl_Window {
 		location.x = WINDOW_WIDTH-110;
 		location.y = SBAR_TEXT_HEIGHT;
 		ss << "HP: " << s->mc->hitPoints << "/" << s->mc->maxHitPoints;
-		//SDL_GL_RenderText(ss.str().c_str(), TEXT_WHITE, &location);
 		ss.str("");
 
 		// pills
 		location.x = 20;
 		location.y = SBAR_TEXT_HEIGHT;
 		ss << s->mc->pillCount;
-		//SDL_GL_RenderText(("Pills: " + ss.str()).c_str(), TEXT_WHITE, &location);		
 
 
 		// draw MC
@@ -120,9 +119,11 @@ class MyGlWindow : public Fl_Gl_Window {
 
 public:
 	// OPENGL WINDOW CONSTRUCTOR
-	MyGlWindow(int X,int Y,int W,int H,const char*L=0) : Fl_Gl_Window(X,Y,W,H,L) {
+	MyGlWindow(int X,int Y,int W,int H,const char*L=0, Stage *g) : Fl_Gl_Window(X,Y,W,H,L) {
 		fg = 1.0;
 		bg = 0.0;
+
+		s = g;
 		end();
 	}
 
