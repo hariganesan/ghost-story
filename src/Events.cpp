@@ -15,4 +15,6 @@ int MyGlWindow::handle(int event) {
 		default:
 			return fltk::Fl_Gl_Window::handle(event);
 	}
+
+	return EXIT_FAILURE;
 }
