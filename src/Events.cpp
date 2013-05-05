@@ -13,26 +13,26 @@ int MyGlWindow::handle(int event) {
 			switch (Fl::event_key()) {
 				// WASD movement
 				case 'w':
-					if (isGhost) {
+					if (s->mc->isGhost) {
 						s->mcG->moveUp();
 					}
 					redraw(); return 1;
 				case 'a':
-					if (isGhost) {
+					if (s->mc->isGhost) {
 						s->mcG->moveLeft();
-					} else if (!isGhost) {
+					} else if (!s->mc->isGhost) {
 						s->mc->moveLeft();
 					}
 					redraw(); return 1;
 				case 's':
-					if (isGhost) {
+					if (s->mc->isGhost) {
 						s->mcG->moveDown();
 					}
 					redraw(); return 1;
 				case 'd':
-					if (isGhost) {
+					if (s->mc->isGhost) {
 						s->mcG->moveRight();
-					} else if (!isGhost) {
+					} else if (!s->mc->isGhost) {
 						s->mc->moveRight();
 					}
 					redraw(); return 1;
