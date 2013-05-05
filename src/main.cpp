@@ -6,7 +6,7 @@
 using namespace std;
 
 void makeWindow();
-void runGame(Stage *s);
+//void runGame(Stage *s);
 //void render(Stage *s);
 
 int main(int argc, char **argv) {
@@ -32,7 +32,7 @@ void makeWindow() {
 	win.show();
 }
 
-void runGame(Stage *s) {
+/*void runGame(Stage *s) {
 	
 	// game state
 	bool isRunning = true;
@@ -44,22 +44,7 @@ void runGame(Stage *s) {
 
 	while (isRunning) {
 		// EVENTS
-		/*while (SDL_PollEvent(&event)) {
-			if (event.type == SDL_QUIT || 
-				 (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_q)) {
-				isRunning = false;
-			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_g) {
-				keys.g = true;
-			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_LEFT) {
-				keys.left = true;
-			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_DOWN) {
-				keys.down = true;
-			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_RIGHT) {
-				keys.right = true;
-			} else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_UP) {
-				keys.up = true;
-			}
-		}*/
+
 
 		// LOGIC
 		// collision detection
@@ -182,3 +167,4 @@ void runGame(Stage *s) {
 
 	return;
 }
+*/
