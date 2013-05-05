@@ -13,7 +13,7 @@ int MyGlWindow::handle(int event) {
 				return 0;
 			}
 		default:
-			return Fl::Fl_Gl_Window::handle(event);
+			return Fl_Gl_Window::handle(event);
 	}
 
 	return EXIT_FAILURE;
