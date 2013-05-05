@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 
 	//runGame();
 
-	return Fl::run();
+	return (Fl::run());
 }
 
 void makeWindow() {
