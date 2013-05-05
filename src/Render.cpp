@@ -119,7 +119,7 @@ class MyGlWindow : public Fl_Gl_Window {
 
 public:
 	// OPENGL WINDOW CONSTRUCTOR
-	MyGlWindow(int X,int Y,int W,int H,const char*L=0, Stage *g) : Fl_Gl_Window(X,Y,W,H,L) {
+	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0) : Fl_Gl_Window(X,Y,W,H,L) {
 		fg = 1.0;
 		bg = 0.0;
 
