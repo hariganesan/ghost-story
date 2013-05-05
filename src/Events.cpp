@@ -5,6 +5,10 @@
 
 int MyGlWindow::handle(int event) {
 	switch(event) {
+		case FL_FOCUS:
+		case FL_UNFOCUS:
+			return 1;
+			
 		case FL_KEYBOARD:
 			if (Fl::event_key() == 'g') {
 				s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
@@ -15,9 +19,7 @@ int MyGlWindow::handle(int event) {
 			} else {
 				return 0;
 			}
-		default:
-			return Fl_Gl_Window::handle(event);
 	}
 
-	return EXIT_FAILURE;
+	return Fl_Gl_Window::handle(event);
 }
