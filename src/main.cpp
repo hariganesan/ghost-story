@@ -14,7 +14,7 @@
 // open gl
 #include <FL/Fl_Gl_Window.H>
 #include <FL/gl.h>
-#include <Gl/glu.h>
+#include <GL/glu.h>
 
 #include "Actor.hpp"
 
