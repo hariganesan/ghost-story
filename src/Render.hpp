@@ -30,5 +30,5 @@ class MyGlWindow : public Fl_Gl_Window {
 
 public:
 	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0);
-	void SetBrightness(double new_fg, double new_bg);
+	//void SetBrightness(double new_fg, double new_bg);
 };
