@@ -6,8 +6,11 @@
 int MyGlWindow::handle(int event) {
 	switch(event) {
 		case FL_KEYBOARD:
-			if (Fl::event_key() == 'a') {
-				std::cout << "hit a" << std::endl;
+			if (Fl::event_key() == 'g') {
+				s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
+				s->mcP->possessed = false;
+				s->mcP = NULL;
+				redraw();
 				return 1;
 			} else {
 				return 0;
