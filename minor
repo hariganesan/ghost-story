@@ -2,6 +2,6 @@
 
 git a .
 git c -m "m"
-git p
+#git p
 git p zoo
 echo "pushed minor edit"
