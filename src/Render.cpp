@@ -5,9 +5,6 @@
 
 // OPENGL WINDOW CLASS
 class MyGlWindow : public Fl_Gl_Window {
-	Stage *s;
-	double fg;                       // foreground brightness
-	double bg;                       // background brightness
 	// FIX OPENGL VIEWPORT
 	//     Do this on init or when window's size is changed
 	void FixViewport(int W,int H) {
