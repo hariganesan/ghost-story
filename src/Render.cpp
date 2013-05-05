@@ -21,7 +21,6 @@ void MyGlWindow::draw () {
   // Clear screen to bg color
   glClearColor(bg, bg, bg, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glPushMatrix();
 	// TODO: change to 0,1 for depth
 	stringstream ss;
 	Location location = Location();
@@ -104,7 +103,6 @@ void MyGlWindow::draw () {
 	// END DRAWING
 	////////////////
 
-	glPopMatrix();
 }
 
 // HANDLE WINDOW RESIZING
