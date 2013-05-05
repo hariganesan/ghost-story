@@ -5,15 +5,15 @@
 
 int MyGlWindow::handle(int event) {
 	switch(event) {
-		case fltk::KEY:
-			if (fltk::event_key() == 'a') {
+		case KEY:
+			if (event_key() == 'a') {
 				std::cout << "hit a" << std::endl;
 				return 1;
 			} else {
 				return 0;
 			}
 		default:
-			return fltk::Fl_Gl_Window::handle(event);
+			return Fl_Gl_Window::handle(event);
 	}
 
 	return EXIT_FAILURE;
