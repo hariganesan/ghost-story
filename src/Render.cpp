@@ -115,7 +115,7 @@ void MyGlWindow::resize(int X,int Y,int W,int H) {
 }
 
 // OPENGL WINDOW CONSTRUCTOR
-MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=0) : Fl_Gl_Window(X,Y,W,H,L) {
+MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_Window(X,Y,W,H,L) {
 	fg = 1.0;
 	bg = 0.0;
 

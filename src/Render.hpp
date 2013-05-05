@@ -29,6 +29,6 @@ class MyGlWindow : public Fl_Gl_Window {
 	void resize(int X,int Y,int W,int H);
 
 public:
-	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L);
+	MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L=20);
 	void SetBrightness(double new_fg, double new_bg);
 };
