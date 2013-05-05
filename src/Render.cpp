@@ -39,10 +39,10 @@ void MyGlWindow::draw () {
 	// draw status bar
 	glColor3ub(0,0,0);
 	glBegin(GL_QUADS);
-	glVertex2f(0, 0);
+	glVertex2f(-WINDOW_WIDTH, 0);
 	glVertex2f(WINDOW_WIDTH, 0);
 	glVertex2f(WINDOW_WIDTH, SBAR_HEIGHT);
-	glVertex2f(0, SBAR_HEIGHT);
+	glVertex2f(-WINDOW_WIDTH, SBAR_HEIGHT);
 	glEnd();
 
 	// HP
@@ -99,10 +99,10 @@ void MyGlWindow::draw () {
 	// draw ground
 	glColor3ub(150, 50, 0);
 	glBegin(GL_QUADS);
-	glVertex2f(0, GROUND_HEIGHT);
-	glVertex2f(WINDOW_WIDTH, GROUND_HEIGHT);
+	glVertex2f(-WINDOW_WIDTH, -WINDOW_HEIGHT);
+	glVertex2f(WINDOW_WIDTH, -WINDOW_HEIGHT);
 	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
-	glVertex2f(0, WINDOW_HEIGHT);
+	glVertex2f(-WINDOW_WIDTH, WINDOW_HEIGHT);
 	glEnd();
 
 	////////////////

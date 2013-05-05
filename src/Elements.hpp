@@ -24,7 +24,7 @@ const double GHOST_SHRINK = 0.65;
 
 // environment
 const int SKY_COLOR = 3;
-const int GROUND_HEIGHT = WINDOW_HEIGHT-50;
+const int GROUND_HEIGHT = -WINDOW_HEIGHT+50;
 const int GRAVITY_DEF = 10;
 
 // sdl
