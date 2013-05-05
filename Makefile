@@ -4,8 +4,8 @@
 # compiler options
 CC=g++
 CFLAGS=-g3
-INCL =-I/usr/include -I/usr/local/include -O2 -march=x86-64 -fmessage-length=0 -Wall -I/usr/X11R6/include
-LIBS = -L/usr/X11R6/lib -Wl,-rpath,/usr/X11R6/lib -lfltk_images -lpng  -lz -lfltk_gl -lGLU -lGL -lfltk -lm -lXext -lX11 -lsupc++ -lfontconfig -lXft -lXinerama
+LIBS = -L/usr/X11R6/lib -Wl,-rpath,/usr/X11R6/lib -lfltk_images -lpng  -lz -lfltk_gl \
+	-lGLU -lGL -lfltk -lm -lXext -lX11 -lsupc++ -lfontconfig -lXft -lXinerama
 INCLUDE = -I/usr/include -I/usr/local/include -O2 -march=x86-64 -fmessage-length=0 -Wall -I/usr/X11R6/include
 LIBDIR = -lfltk -fltk_gl -lfltk_gl -lGLU -lGL -lm -lpng -lX11 -lfontconfig -lXft -lXinerama
 
@@ -18,7 +18,7 @@ all: $(SRC)/*.o main clean
 
 # build main
 main: main.o Actor.o
-	$(CC) $^ $(INCLUDE) $(LIBDIR) -o $@
+	$(CC) $^ $(INCLUDE) $(LIBS) -o $@
 
 # build object files
 $(SRC)/*.o: $(SRC)/*.cpp
