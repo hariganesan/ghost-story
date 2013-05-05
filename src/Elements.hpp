@@ -24,7 +24,7 @@ const int GROUND_HEIGHT = WINDOW_HEIGHT-50;
 const int GRAVITY_DEF = 10;
 
 // sdl
-const int SDL_FRAME_RATE = 30;
+//const int SDL_FRAME_RATE = 30;
 
 // events to be used to hold info for game logic
 struct Keys {
