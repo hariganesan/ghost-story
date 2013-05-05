@@ -22,18 +22,23 @@ void MyGlWindow::draw () {
   glClearColor(bg, bg, bg, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-
-// Draw 'X' in fg color
-	//glColor3f(fg, fg, fg);
-	//glBegin(GL_LINE_STRIP); glVertex2f(w(), h()); glVertex2f(-w(),-h()); glEnd();
-	//glBegin(GL_LINE_STRIP); glVertex2f(w(),-h()); glVertex2f(-w(), h()); glEnd();
-	
 	std::stringstream ss;
 	Location location = Location();
 
 	////////////////
 	// BEGIN DRAWING
 	////////////////
+
+	// draw sky
+
+	glColor3ub(10, 10, 220);
+	glBegin(GL_QUADS);
+	glVertex2f(-WINDOW_WIDTH, WINDOW_HEIGHT);
+	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
+	glVertex2f(WINDOW_WIDTH, GROUND_HEIGHT);
+	glVertex2f(-WINDOW_WIDTH, GROUND_HEIGHT);
+	glEnd();
+
 
 	// draw ground
 	glColor3ub(150, 50, 0);
