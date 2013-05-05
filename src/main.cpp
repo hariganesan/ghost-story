@@ -1,9 +1,8 @@
 // Hari Ganesan 2/4/13
 // zombie-roll: an rpg
 
-#include "Render.cpp"
+#include "Render.hpp"
 
-using namespace std;
 
 void makeWindow();
 //void runGame(Stage *s);
