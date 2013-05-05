@@ -6,7 +6,7 @@
 using namespace std;
 
 void makeWindow();
-void runGame();
+void runGame(Stage *s);
 //void render(Stage *s);
 
 int main(int argc, char **argv) {
@@ -33,7 +33,7 @@ void makeWindow() {
 	win.show();
 }
 
-void runGame() {
+void runGame(s) {
 	
 	// game state
 	bool isRunning = true;
