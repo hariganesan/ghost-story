@@ -45,7 +45,7 @@ void MyGlWindow::draw () {
 	glEnd();
 
 	// draw status bar
-	glColor3ub(20,20,20);
+	glColor3ub(50,50,50);
 	glBegin(GL_QUADS);
 	glVertex2f(-WINDOW_WIDTH, WINDOW_HEIGHT);
 	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
