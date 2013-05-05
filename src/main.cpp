@@ -200,7 +200,7 @@ void render(Stage *s) {
 	// TODO: change to 0,1 for depth
 	glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, -1, 1); // set matrix
 	stringstream ss;
-	location = Location();
+	Location location = Location();
 
 	////////////////
 	// BEGIN DRAWING
