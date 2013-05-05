@@ -19,15 +19,15 @@ void MyGlWindow::draw () {
 	if (!valid()) { valid(1); FixViewport(w(), h()); }      // first time? init
 
   // Clear screen to bg color
- // glClearColor(bg, bg, bg, 0.0);
+  glClearColor(bg, bg, bg, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 
 
 // Draw 'X' in fg color
-	glColor3f(fg, fg, fg);
-	glBegin(GL_LINE_STRIP); glVertex2f(w(), h()); glVertex2f(-w(),-h()); glEnd();
-	glBegin(GL_LINE_STRIP); glVertex2f(w(),-h()); glVertex2f(-w(), h()); glEnd();
-	/*
+	//glColor3f(fg, fg, fg);
+	//glBegin(GL_LINE_STRIP); glVertex2f(w(), h()); glVertex2f(-w(),-h()); glEnd();
+	//glBegin(GL_LINE_STRIP); glVertex2f(w(),-h()); glVertex2f(-w(), h()); glEnd();
+	
 	stringstream ss;
 	Location location = Location();
 
@@ -104,7 +104,7 @@ void MyGlWindow::draw () {
 	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
 	glVertex2f(0, WINDOW_HEIGHT);
 	glEnd();
-*/
+
 	////////////////
 	// END DRAWING
 	////////////////
@@ -119,14 +119,14 @@ void MyGlWindow::resize(int X,int Y,int W,int H) {
 }
 
 // OPENGL WINDOW CONSTRUCTOR
-/*MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_Window(X,Y,W,H,L) {
+MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_Window(X,Y,W,H,L) {
 	fg = 1.0;
 	bg = 0.0;
 
 	s = g;
-}*/
+}
 
-//void MyGlWindow::SetBrightness(double new_fg, double new_bg) {
-//	fg = new_fg; bg = new_bg; redraw(); 
-//}
+void MyGlWindow::SetBrightness(double new_fg, double new_bg) {
+	fg = new_fg; bg = new_bg; redraw(); 
+}
 
