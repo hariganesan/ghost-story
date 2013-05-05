@@ -119,12 +119,12 @@ void MyGlWindow::resize(int X,int Y,int W,int H) {
 }
 
 // OPENGL WINDOW CONSTRUCTOR
-MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_Window(X,Y,W,H,L) {
+/*MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_Window(X,Y,W,H,L) {
 	fg = 1.0;
 	bg = 0.0;
 
 	s = g;
-}
+}*/
 
 //void MyGlWindow::SetBrightness(double new_fg, double new_bg) {
 //	fg = new_fg; bg = new_bg; redraw(); 
