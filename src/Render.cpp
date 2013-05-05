@@ -19,7 +19,7 @@ void MyGlWindow::draw () {
 	if (!valid()) { valid(1); FixViewport(w(), h()); }      // first time? init
 
   // Clear screen to bg color
-  glClearColor(bg, bg, bg, 0.0);
+  //glClearColor(bg, bg, bg, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	// TODO: change to 0,1 for depth
 	stringstream ss;
