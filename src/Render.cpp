@@ -1,7 +1,7 @@
 // Hari Ganesan 5/5/13
 // ghost-story GL commands
 
-
+#include "Render.hpp"
 
 // OPENGL WINDOW CLASS
 class MyGlWindow : public Fl_Gl_Window {
