@@ -21,7 +21,13 @@ void MyGlWindow::draw () {
   // Clear screen to bg color
   glClearColor(bg, bg, bg, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	
+
+
+// Draw 'X' in fg color
+	glColor3f(fg, fg, fg);
+	glBegin(GL_LINE_STRIP); glVertex2f(w(), h()); glVertex2f(-w(),-h()); glEnd();
+	glBegin(GL_LINE_STRIP); glVertex2f(w(),-h()); glVertex2f(-w(), h()); glEnd();
+	/*
 	stringstream ss;
 	Location location = Location();
 
@@ -38,7 +44,7 @@ void MyGlWindow::draw () {
 	glVertex2f(WINDOW_WIDTH, SBAR_HEIGHT);
 	glVertex2f(0, SBAR_HEIGHT);
 	glEnd();
-/*
+
 	// HP
 	location.x = WINDOW_WIDTH-110;
 	location.y = SBAR_TEXT_HEIGHT;
@@ -89,7 +95,7 @@ void MyGlWindow::draw () {
 		glVertex2f(s->mcG->getX(), s->mcG->getY()+s->mcG->getH());
 		glEnd();
 	}
-*/
+
 	// draw ground
 	glColor3ub(150, 50, 0);
 	glBegin(GL_QUADS);
@@ -98,7 +104,7 @@ void MyGlWindow::draw () {
 	glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT);
 	glVertex2f(0, WINDOW_HEIGHT);
 	glEnd();
-
+*/
 	////////////////
 	// END DRAWING
 	////////////////
