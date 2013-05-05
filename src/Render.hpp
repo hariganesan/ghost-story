@@ -1,7 +1,6 @@
 // Hari Ganesan 5/5/13
 // ghost-story GL commands library file
 
-#include <iostream>
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Menu_Bar.H>

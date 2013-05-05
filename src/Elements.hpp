@@ -1,6 +1,7 @@
 // Hari Ganesan
 // Elements file
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <math.h>
 
