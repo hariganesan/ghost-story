@@ -10,14 +10,41 @@ int MyGlWindow::handle(int event) {
 			return 1;
 
 		case FL_KEYBOARD:
-			if (Fl::event_key() == 'g' && !s->mc->isGhost) {
-				s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
-				s->mcP->possessed = false;
-				s->mcP = NULL;
-				redraw();
-				return 1;
-			} else {
-				return 0;
+			switch (Fl::event_key()) {
+				// WASD movement
+				case 'w':
+					if (isGhost) {
+						s->mcG->moveUp();
+					}
+					redraw(); return 1;
+				case 'a':
+					if (isGhost) {
+						s->mcG->moveLeft();
+					} else if (!isGhost) {
+						s->mc->moveLeft();
+					}
+					redraw(); return 1;
+				case 's':
+					if (isGhost) {
+						s->mcG->moveDown();
+					}
+					redraw(); return 1;
+				case 'd':
+					if (isGhost) {
+						s->mcG->moveRight();
+					} else if (!isGhost) {
+						s->mc->moveRight();
+					}
+					redraw(); return 1;
+
+				// ghost
+				case 'g':
+					if (!s->mc->isGhost) {
+						s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
+						s->mcP->possessed = false;
+						s->mcP = NULL;
+						redraw(); return 1;
+					}
 			}
 	}
 
