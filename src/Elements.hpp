@@ -18,13 +18,13 @@ const int CHAR_H_DEF = 100;
 const int MOTION_DIM = 20;
 const int MAX_ENEMY_COUNT = 1;
 const int POS_X_START = 100;
-const int POS_Y_START = WINDOW_HEIGHT-50-CHAR_H_DEF;
+const int POS_Y_START = 50;
 const int VEL_INIT_DEF = 50;
 const double GHOST_SHRINK = 0.65;
 
 // environment
 const int SKY_COLOR = 3;
-const int GROUND_HEIGHT = WINDOW_HEIGHT-50;
+const int GROUND_HEIGHT = 50;
 const int GRAVITY_DEF = 10;
 
 // sdl
