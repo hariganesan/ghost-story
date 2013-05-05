@@ -1,7 +1,7 @@
 // Hari Ganesan 2/4/13
 // zombie-roll: an rpg
 
-#include "Render.hpp"
+#include "Render.cpp"
 
 using namespace std;
 
