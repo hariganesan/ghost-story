@@ -90,8 +90,8 @@ void Character::takeDamage(int damage) {
 	}
 }
 
-void Stage::popUp(string msg) {
-	cerr << msg << endl;
+void Stage::popUp(std::string msg) {
+	std::cerr << msg << std::endl;
 }
 
 // 100 percent of c1 in c2
