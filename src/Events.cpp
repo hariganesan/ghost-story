@@ -13,57 +13,19 @@ int MyGlWindow::handle(int event) {
 			switch (Fl::event_key()) {
 				// WASD movement
 				case 'w':
-					if (s->mc->isGhost) {
-						s->mcG->moveUp();
-					} else if (!s->mc->isJumping) {
-						s->mc->isJumping = true;
-						s->mc->jump();
-					}
-					redraw(); return 1;
+					keys.up = true;
 				case 'a':
-					if (s->mc->isGhost) {
-						s->mcG->moveLeft();
-					} else {
-						s->mc->moveLeft();
-					}
-					redraw(); return 1;
+					keys.left = true;
 				case 's':
-					if (s->mc->isGhost) {
-						s->mcG->moveDown();
-					}
-					redraw(); return 1;
+					keys.down = true;
 				case 'd':
-					if (s->mc->isGhost) {
-						s->mcG->moveRight();
-					} else {
-						s->mc->moveRight();
-					}
-					redraw(); return 1;
+					keys.right = true;
 
 				// ghost scenarios
 				case 'g':
-					if (!s->mc->isGhost && s->mc->pillCount > 0) {
-						if (s->mcP) {
-							s->mcG = s->mc->createGhost(s->mcP->getX(), s->mcP->getY());
-							s->mcP->possessed = false;
-							s->mcP = NULL;
-						} else {
-							s->mcG = s->mc->createGhost(s->mc->getX(), s->mc->getY());
-						}
-					} else if (s->mc->isGhost) {
-						for (int i = 0; i < MAX_ENEMY_COUNT; i++) {
-							if (s->fullOverlap(s->mcG, s->enemies[i])) {
-								s->mcP = s->enemies[i];
-								s->enemies[i]->possessed = true;
-								s->enemies[i]->tracking = false;
-							}
-						}
-						s->mc->destroyGhost();
-					} else {
-						s->popUp("no pills remaining!");
-					}
-					redraw(); return 1;
+					keys.g = true;
 
+				default: return 1;
 			}
 	}
 

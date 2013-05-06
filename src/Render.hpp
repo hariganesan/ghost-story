@@ -19,6 +19,7 @@
 // OPENGL WINDOW CLASS
 class MyGlWindow : public Fl_Gl_Window {
 	Stage *s;
+	Keys keys;
 	double fg;                       // foreground brightness
 	double bg;                       // background brightness
 

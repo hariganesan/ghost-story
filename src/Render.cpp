@@ -131,6 +131,7 @@ MyGlWindow::MyGlWindow(Stage *g, int X,int Y,int W,int H,const char*L) : Fl_Gl_W
 	bg = 0.0;
 
 	s = g;
+	keys = Keys();
 }
 
 void MyGlWindow::SetBrightness(double new_fg, double new_bg) {
